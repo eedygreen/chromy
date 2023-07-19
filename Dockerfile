@@ -7,8 +7,4 @@ RUN apk add chrony=4.3-r4 \
 
 # Copy custom NTP configuration
 COPY chrony.conf /etc/chrony/chrony.conf
-
-#RUN chronyd -f /etc/chrony/chrony.conf
-#ENTRYPOINT ["/etc/init.d/chrony"]
-# Set the entry point to start NTP service
-
+LABEL org.opencontainers.image.source https://github.com/eedygreen/chrony
